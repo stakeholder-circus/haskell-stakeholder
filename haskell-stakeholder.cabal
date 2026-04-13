@@ -1,0 +1,44 @@
+cabal-version:      2.4
+name:               haskell-stakeholder
+version:            0.1.0.0
+build-type:         Simple
+license:            MIT
+license-file:       LICENSE
+author:             stakeholder-circus
+maintainer:         david@supan.si
+category:           CLI
+synopsis:           Deterministic Haskell parity target for stakeholder-circus
+
+common shared
+  default-language: Haskell2010
+  ghc-options: -Wall
+  build-depends:
+      aeson >= 2.2 && < 2.3,
+      base >=4.15 && <5,
+      bytestring >= 0.12,
+      containers >= 0.7,
+      text >= 2.1
+
+library
+  import:           shared
+  hs-source-dirs:   src
+  exposed-modules:  Stakeholder.App
+
+executable haskell-stakeholder
+  import:           shared
+  hs-source-dirs:   app
+  main-is:          Main.hs
+  build-depends:    haskell-stakeholder
+
+test-suite haskell-stakeholder-test
+  import:           shared
+  type:             exitcode-stdio-1.0
+  hs-source-dirs:   test
+  main-is:          Spec.hs
+  build-depends:
+      QuickCheck,
+      haskell-stakeholder,
+      tasty,
+      tasty-hunit,
+      tasty-quickcheck,
+      vector

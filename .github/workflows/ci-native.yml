@@ -1,0 +1,29 @@
+name: ci-native
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  ci-native:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: haskell-actions/setup@v2
+        with:
+          ghc-version: "9.10.1"
+          cabal-version: "3.12.1.0"
+      - run: cabal update
+      - run: cabal install fourmolu hlint --ignore-project --installdir="$HOME/.local/bin" --overwrite-policy=always
+      - run: echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - run: python3 scripts/validate_scaffold.py
+      - run: fourmolu -m check app src test
+      - run: hlint .
+      - run: cabal build all
+      - run: cabal test all

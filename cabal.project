@@ -1,0 +1,5 @@
+packages: .
+allow-newer:
+  aeson:bytestring,
+  aeson:containers,
+  aeson:time

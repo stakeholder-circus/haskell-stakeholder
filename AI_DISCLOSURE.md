@@ -2,8 +2,8 @@
 
 This repository is part of the stakeholder-circus rewrite program.
 
-- Repository: rust-stakeholder
-- Role: Canonical Rust source of truth and the only true public fork of giacomo-b/rust-stakeholder.
+- Repository: haskell-stakeholder
+- Role: Correctness-oracle parity target.
 - Review model: Codex-assisted, manually reviewed, human in the loop
 - Contact: david@supan.si
 
@@ -23,3 +23,7 @@ Use the following trailers on relevant commits:
 - Assisted-by: OpenAI Codex
 - Generated-by: OpenAI Codex
 - Reviewed-by: David Supan
+
+## Authorship note
+
+This derivative repository retains the upstream MIT notice from `giacomo-b/rust-stakeholder`. Later changes are documented through provenance records and manual review rather than extra copyright claims in the derivative MIT file.

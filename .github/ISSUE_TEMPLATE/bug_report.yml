@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a concrete problem with evidence.
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+    validations:
+      required: true
+  - type: textarea
+    id: ai
+    attributes:
+      label: AI / review disclosure
+      description: Note whether AI assistance was involved and confirm manual review.
+    validations:
+      required: true

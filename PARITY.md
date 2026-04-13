@@ -2,11 +2,17 @@
 
 ## Role
 
-Canonical Rust source of truth and the only true public fork of giacomo-b/rust-stakeholder.
+Correctness-oracle parity target.
 
 ## Parity class
 
-- canonical-source
+- full-parity-target
+
+## Current tranche
+
+- classic-six plus modern-core implemented locally
+- later packet families remain grouped fallback with explicit gaps
+- local-only until the program-level publication guardrail is met
 
 ## Method and Review Model
 
@@ -16,8 +22,9 @@ Canonical Rust source of truth and the only true public fork of giacomo-b/rust-s
 - Derived from giacomo-b/rust-stakeholder where applicable
 - Missing behavior must fail fast and be recorded explicitly in GAPS.md
 
-## Attribution model
+## Implementation policy
 
-- Original upstream Rust history is preserved for language repos created from the Rust baseline.
-- New language-specific rewrite commits sit on top of the imported upstream history.
-- MIT licensing remains in place for fork-derived work.
+- pure core pipeline
+- IO only at CLI and test boundaries
+- deterministic normalized JSON output
+- exact CLI-schema reuse via stakeholder-core contract notes and traceability references

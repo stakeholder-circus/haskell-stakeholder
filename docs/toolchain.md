@@ -19,5 +19,5 @@
 - `dependency-review`
 
 ## Current limitation
-- `flake.lock` has not been generated locally because `nix` is not installed in the current environment.
-- The official multi-user macOS Nix installer still requires a live sudo-authenticated Codex PTY or a separate user-run install in a local terminal.
+- `flake.lock` is now generated locally through the installed Nix toolchain.
+- The official multi-user macOS Nix installer is already the chosen and installed path on this workstation.

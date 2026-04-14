@@ -1,8 +1,8 @@
 # haskell-stakeholder Status
 
-Last updated: 2026-04-09 21:14 CEST
+Last updated: 2026-04-13 CEST
 
-- Role: `active-wider-matrix`
+- Role: `validated-wider-matrix`
 - Parity class: `full-parity-target`
 - Phase target: `native-and-docker-validated-wider-matrix`
 - Phase state: `complete`
@@ -16,13 +16,13 @@ Last updated: 2026-04-09 21:14 CEST
 - Upstream: `https://github.com/giacomo-b/rust-stakeholder`
 
 ## Blockers
-- flake.lock generation is pending until nix is installed locally.
+- `flake.lock` is now generated through the installed Nix toolchain.
 - Remote creation/push is blocked by the program-level 10-full-rewrites publication guardrail.
 - GitHub required-check binding is deferred until the repo has a remote and stable CI contexts.
 
 ## Next
 - Keep later packet families fail-fast/grouped until their dedicated tranche.
-- Normalize flake.lock after nix is installed via the official multi-user macOS installer.
+- Keep the repo publication-held until the 10-rewrite threshold is met.
 
 ## Canonical references
 - [`stakeholder-core/docs/program/rewrite-status-matrix.md`](/Users/davidsupan/shareholder/stakeholder-core/docs/program/rewrite-status-matrix.md)

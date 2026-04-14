@@ -5,7 +5,7 @@
 Haskell parity target under `stakeholder-circus`.
 
 ## Status
-- Active local implementation tranche.
+- Validated wider-matrix repo held for publication.
 - Imported Rust history is preserved for attribution and auditability.
 - Classic-six and modern-core are implemented locally with a pure core pipeline and deterministic normalized JSON.
 - Native validation passes via `ghcup run --ghc 9.6.7`.

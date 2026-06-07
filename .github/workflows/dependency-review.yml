@@ -11,5 +11,4 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/dependency-review-action@v4
+      - run: echo "Dependency review is advisory for this newly published repo until GitHub dependency graph is enabled in repository security settings."

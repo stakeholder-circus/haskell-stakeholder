@@ -11,7 +11,7 @@ jobs:
   docker-smoke:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: docker build -t haskell-stakeholder .
       - run: docker run --rm haskell-stakeholder --list-values
       - run: docker run --rm haskell-stakeholder --dev-type backend --complexity medium --seed docker-code --focus-family code_analyzer --output-format json

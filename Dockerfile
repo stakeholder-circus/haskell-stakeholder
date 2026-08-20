@@ -1,4 +1,4 @@
-FROM haskell:9.10.3-slim-bookworm AS build
+FROM haskell:9.14.1-slim-bookworm AS build
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates build-essential libgmp-dev zlib1g-dev && rm -rf /var/lib/apt/lists/*
 WORKDIR /src
 COPY . .
